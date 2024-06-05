@@ -20,6 +20,17 @@ interface RowData {
   total: number;
 }
 
+// クリックボタン
+const CustomButtonComponent = () => {
+  return (
+    <button
+      onClick={() => window.alert('clicked')}>
+        Push Me!
+      </button>
+  )
+}
+
+
 export const Grid = () => {
   const [rowData, setRowData] = useState<RowData[]>([]);
   const [gridApi, setGridApi] = useState<agGrid.GridApi | null>(null);
@@ -46,6 +57,7 @@ export const Grid = () => {
     { field: "silver", filter: "agNumberColumnFilter" },
     { field: "bronze", filter: "agNumberColumnFilter" },
     { field: "total", filter: "agNumberColumnFilter" },
+    { field: 'button', cellRenderer: CustomButtonComponent }
   ];
 
   const defaultColDef: agGrid.ColDef = {
