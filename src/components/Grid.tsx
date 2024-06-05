@@ -24,7 +24,7 @@ interface RowData {
 const CustomButtonComponent = () => {
   return (
     <button
-      style={{ border: '1px solid #999' }}
+      style={{ border: '1px solid #999', padding: '2px 5px', fontSize: '0.8em', backgroundColor: '#EFEF', color: '#333' }}
       onClick={() => window.alert('clicked')}>
         Push Me!
       </button>
